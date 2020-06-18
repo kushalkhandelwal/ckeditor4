@@ -273,6 +273,9 @@
 			node, i;
 
 		if ( range.startContainer.type != CKEDITOR.NODE_ELEMENT ) {
+			if(!range.startContainer.getParent()){
+				return collection;
+			}
 			siblings = range.startContainer.getParent().getChildren();
 			elementIndex = range.startContainer.getIndex();
 		} else {
