@@ -128,7 +128,7 @@
 	 * @returns {Number} return.offset An offset of the caret.
 	 */
 	CKEDITOR.plugins.textMatch.getTextAndOffset = function( range ) {
-		if ( !range.collapsed ) {
+		if (!range || !range.collapsed ) {
 			return null;
 		}
 
